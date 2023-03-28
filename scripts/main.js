@@ -11,6 +11,7 @@ function fetchData(drink, index) {
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
     .then((res) => res.json())
     .then((data) => {
+      resetCard()
       let drinkData = data.drinks[index];
       document.querySelector("main").style.display = "flex";
       document.querySelector("h2").innerText = drinkData.strDrink;
@@ -31,6 +32,13 @@ function fetchData(drink, index) {
       document.querySelector("img").src = drinkData.strDrinkThumb;
       document.querySelector(".instructions").innerHTML =
         drinkData.strInstructions;
+    //display arrows if necessary
+    if (data.drinks[index + 1]){
+      nextBtn.style.display = 'block'
+    }
+    if (data.drinks[index - 1]){
+      previousBtn.style.display = 'block'
+    }
     })
     .catch((err) => {
       console.log(`error ${err}`);
@@ -38,7 +46,6 @@ function fetchData(drink, index) {
 }
 
 function displayIngredients(ingredients) {
-  document.querySelector(".ingredients").innerHTML = "";
   ingredients.map((ingredient) => {
     document.querySelector(
       ".ingredients"
@@ -46,6 +53,11 @@ function displayIngredients(ingredients) {
   });
 }
 
+function resetCard(){
+  document.querySelector(".ingredients").innerHTML = "";
+  nextBtn.style.display = 'none'
+  previousBtn.style.display = 'none'
+}
 submitBtn.addEventListener("click", function () {
   index = 0;
   currentDrink = input.value;

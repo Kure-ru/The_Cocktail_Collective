@@ -159,6 +159,7 @@ p {
 
 .navigation ion-icon {
   font-size: 1.5rem;
+  display: none;
 }
 
 ion-icon:hover {
