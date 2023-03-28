@@ -3,7 +3,7 @@ Discover your next favorite cocktail
 
 [Voir le site](https://kure-ru.github.io/The_Cocktail_Collective/)
 
-![The Cocktail Collective](aperçu.png)
+![The Cocktail Collective](img_projet.png)
 
 ## Comment je l'ai fait:
 
