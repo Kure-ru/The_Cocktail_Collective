@@ -1,7 +1,7 @@
 # The Cocktail Collective
 Discover your next favorite cocktail
 
-**Lien vers le site:** 
+[Voir le site](https://kure-ru.github.io/The_Cocktail_Collective/)
 
 ![The Cocktail Collective](aperçu.png)
 
